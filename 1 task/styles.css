@@ -1,0 +1,22 @@
+ body{
+    background-color: gray;
+    font-family: sans-serif;
+}
+.timer-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 600px;
+    background-color: #fff;
+}
+.timer-wrapper span{
+    font-weight: bold;
+}
+#timeOut{
+    font-weight: bold;
+}
