@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@300;400;900&display=swap');body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .wrap{
@@ -17,15 +25,20 @@
     margin: 0 auto;
 }
 .active{
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 .active:hover{
     color: #FCB045;
 }
 .flexbox{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .gradient{
+  background-image: -o-linear-gradient(45deg, #FCB045, #FD1D1D);
   background-image: linear-gradient(45deg, #FCB045, #FD1D1D);
   background-size: 100%;
   background-repeat: repeat;
@@ -45,7 +58,9 @@ header *{
 }
 header{
     font-size: 16px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 55px 0 0 0;
 }
 .header-under-logo_text{
@@ -62,19 +77,25 @@ header{
     padding: 5px 7% 0 0;
 }
 .header-nav_block .header-nav_list {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .header-nav_block .header-nav_list .header-nav_item a{
     text-decoration: none;
 }
 .header-contact_block{
     padding: 5px 0 0 0;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 310px;
     width: 100%;
 }
 .header-contact-social_list{
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 118px;
 }
 .header-contact-social_list li:first-child{
@@ -84,7 +105,9 @@ header{
 .main_block{
     padding: 92px 0;
     color: #E4E5EA;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .main_block .main-title-left_block .main-title_text{
     margin: 0;
@@ -103,10 +126,17 @@ header{
     font-weight: 900;
 }
 .main-consult-benefits-right_block{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 3px 0 0 0;
-    flex-direction: column;
-    justify-content: right;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 .main-consult-benefits_title{
     font-size: 18px;
@@ -121,14 +151,18 @@ header{
 }
 
 .main_block .main-consult-benefits_items-list{
-    align-items: right;
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
     width: 330px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .main-consult-benefits_items-list .main-consult-benefits_item{
     width: 50%;
     margin: 5px 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: right;
 }
 
@@ -163,6 +197,8 @@ header{
     color: #E4E5EA;
     cursor: pointer;
     background-color: #4077F3;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .main-consult-benefits-btn_block .main-consult-benefits_btn:hover{
@@ -177,7 +213,9 @@ header{
     list-style: none;
 }
 .footer-top_block{
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     
 }
 .footer_block .footer-title{
@@ -199,8 +237,12 @@ header{
     padding: 5px 0;
 }
 .footer_block .footer-menu_block .footer-menu-lists_block{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     width: 475px;
 }
 .footer_block .footer-menu_block .footer-menu-lists_block .footer-menu-list:last-child{
@@ -214,11 +256,17 @@ header{
     text-align: right;
 }
 .footer-contact_social_block{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 .footer-contact-social_list{
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 80px;
 }
 .mobile-show{
@@ -267,8 +315,12 @@ header{
         padding: 0 5%;
     }
     .footer_block .footer-menu_block .footer-menu-lists_block{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: left;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
         width: 410px;
     }
 }
@@ -284,7 +336,8 @@ header{
         padding: 0;
     }
     header{
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         background-color: #0E1014;
         height: 55px;
         padding: 0;
@@ -301,11 +354,18 @@ header{
     .header-nav_block ul{
         font-size: 12px;
         height: 55px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .main_block{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .main_block .main-title-left_block .main-title_text{
         font-size: 36px;
@@ -342,18 +402,24 @@ header{
         height: 1px;
         top: 8px;
         left: 0;
+        background-image: -o-linear-gradient(45deg, #FCB045, #FD1D1D);
         background-image: linear-gradient(45deg, #FCB045, #FD1D1D);
         position: absolute;
     }
     .footer-top_block{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .footer-contact_block *{
         text-align: left;
     }
     .footer-contact_social_block{
         height: 27px;
-        justify-content: left;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
     }
     .footer_block .footer-title{
         font-size: 12px ;
@@ -397,4 +463,3 @@ header{
         width: 90%;
     }
 }
-
