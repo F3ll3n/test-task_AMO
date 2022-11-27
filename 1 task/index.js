@@ -19,7 +19,8 @@ const createTimerAnimator = (sec, currValue) => {
     }, 1000)
   }
   else{
-    console.log('ready')
+    console.log('ready');
+    buttonEl.disabled = false;
     timerEl.style.color = '#00D678'
   }
 };
@@ -39,7 +40,8 @@ const timeFormatter = (value) => {
 
 //Функция вызывающая createTimerAnimator с исходным значением
 const animateTimer = (sec) => {
-  createTimerAnimator(sec, 0)
+  timerEl.innerHTML = '00:00:00';
+  createTimerAnimator(sec, firstStep)
 };
 
 //Слушатель событий, вызывающий функцию, проверающую на корректность input, в противном случае выводящая ошибку
@@ -55,6 +57,7 @@ inputEl.addEventListener('input', () => {
 });
 //Слушатель событий, вызывающий функцию, которая забирает значение input, запускает таймер, выводит ошибки.
 buttonEl.addEventListener('click', () => { 
+  buttonEl.disabled = true;
   if(timeoutValue > 0){
     timerEl.style.color = '#000'
     const seconds = timeoutValue;
